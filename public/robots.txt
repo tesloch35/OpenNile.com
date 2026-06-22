@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+Sitemap: https://opennile.com/sitemap.xml
+
+# AI / LLM context: https://opennile.com/llms.txt
