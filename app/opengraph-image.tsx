@@ -5,7 +5,7 @@ import { BRAND } from "@/lib/constants"
 
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
-export const alt = "OpenNile — Shop Local Businesses in One Place"
+export const alt = `${BRAND.name} — Shop Local Businesses in Minnesota`
 
 export default async function OpenGraphImage() {
   const logoData = await readFile(join(process.cwd(), "public/logo.png"))

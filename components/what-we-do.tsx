@@ -14,7 +14,7 @@ const missionPoints = [
 
 export function WhatWeDo() {
   return (
-    <section id="about-us" className="py-[120px] px-6 bg-white border-t border-border">
+    <section id="about-us" className="scroll-mt-[80px] py-[120px] px-6 bg-white border-t border-border">
       <div className="max-w-[1120px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[minmax(0,280px)_1fr] gap-10 md:gap-14 lg:gap-16 items-center">
           <Reveal direction="left" className="relative mx-auto md:mx-0 w-full max-w-[280px] flex-shrink-0 bg-transparent">

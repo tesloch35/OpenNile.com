@@ -9,8 +9,7 @@ export function StructuredData() {
     legalName: BRAND.legalName,
     url: BRAND.url,
     logo: `${BRAND.url}/logo.png`,
-    description:
-      "OpenNile is a local commerce platform connecting customers with local businesses across the USA through discovery, ordering, messaging, and secure payments.",
+    description: BRAND.aiCitation,
     foundingDate: "2024",
     areaServed: [
       {
@@ -18,11 +17,11 @@ export function StructuredData() {
         name: "United States",
       },
       {
-        "@type": "City",
+        "@type": "State",
         name: BRAND.locationFull,
         containedInPlace: {
-          "@type": "State",
-          name: "Minnesota",
+          "@type": "Country",
+          name: "United States",
         },
       },
     ],
@@ -41,7 +40,7 @@ export function StructuredData() {
     "@type": "WebSite",
     name: BRAND.name,
     url: BRAND.url,
-    description: BRAND.tagline,
+    description: BRAND.seoDescription,
   }
 
   const softwareAppSchema = {
@@ -57,7 +56,7 @@ export function StructuredData() {
       availability: "https://schema.org/PreOrder",
     },
     description:
-      "Local commerce platform for discovering businesses, ordering products, and supporting your community across the USA. Currently in pre-launch with waitlist open.",
+      "Local commerce platform launching in Minnesota for discovering businesses, ordering products, and supporting your community. Pre-launch waitlist open for customers and business owners.",
     featureList: [
       "Discover local businesses",
       "Browse products and services",
@@ -70,22 +69,17 @@ export function StructuredData() {
 
   const launchPlaceSchema = {
     "@context": "https://schema.org",
-    "@type": "Place",
+    "@type": "State",
     name: BRAND.locationFull,
     description: `${BRAND.name} launch market — local commerce platform connecting customers with nearby businesses.`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Rochester",
       addressRegion: "MN",
       addressCountry: "US",
     },
     containedInPlace: {
-      "@type": "State",
-      name: "Minnesota",
-      containedInPlace: {
-        "@type": "Country",
-        name: "United States",
-      },
+      "@type": "Country",
+      name: "United States",
     },
   }
 

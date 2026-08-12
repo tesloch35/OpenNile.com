@@ -29,7 +29,7 @@ const contactItems = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-[120px] px-6 bg-white border-t border-border">
+    <section id="contact" className="scroll-mt-[80px] py-[120px] px-6 bg-white border-t border-border">
       <div className="max-w-[1120px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
           <ContactInfo />

@@ -74,7 +74,7 @@ const businessFeatures = [
 
 export function Benefits() {
   return (
-    <section id="features" className="py-[120px] px-6 bg-cream border-t border-border overflow-visible">
+    <section id="features" className="scroll-mt-[80px] py-[120px] px-6 bg-cream border-t border-border overflow-visible">
       <div className="max-w-[1120px] mx-auto">
         <Reveal className="text-center mb-[72px]">
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-sienna mb-5 justify-center">

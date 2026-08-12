@@ -1,3 +1,5 @@
+import { BRAND } from "@/lib/constants"
+
 export const faqs = [
   {
     question: "What is OpenNile?",
@@ -15,9 +17,8 @@ export const faqs = [
       "Businesses can join by signing up on our waitlist. We offer straightforward onboarding, storefront tools, and transparent pricing to help you reach more local customers.",
   },
   {
-    question: "What cities is OpenNile available in?",
-    answer:
-      "We're launching first in Rochester, MN and expanding across the United States. Join the waitlist to be notified when OpenNile arrives in your area.",
+    question: "Where is OpenNile available?",
+    answer: `We're launching first in ${BRAND.location} and expanding across the United States. Join the waitlist to be notified when OpenNile arrives in your area.`,
   },
   {
     question: "How does OpenNile help local businesses grow?",

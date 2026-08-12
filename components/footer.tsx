@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Reveal } from "@/components/reveal"
+import { SectionLink } from "@/components/section-link"
 import { BRAND } from "@/lib/constants"
 
 const footerLinks = [
@@ -18,9 +19,9 @@ export function Footer() {
       <div className="max-w-[1120px] mx-auto">
         <Reveal>
           <div className="mb-12 pb-12 border-b border-white/10">
-            <Link href="#home" className="font-serif text-[22px] font-bold text-white tracking-[-0.02em]">
+            <SectionLink href="#home" className="font-serif text-[22px] font-bold text-white tracking-[-0.02em]">
               {BRAND.name}
-            </Link>
+            </SectionLink>
             <p className="text-sm text-white/45 leading-relaxed mt-3.5 max-w-[320px]">
               {BRAND.tagline}
             </p>
@@ -29,12 +30,12 @@ export function Footer() {
               <ul className="flex flex-wrap gap-x-6 gap-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
-                    <Link
+                    <SectionLink
                       href={link.href}
                       className="text-sm text-white/55 hover:text-white/90 transition-colors duration-300"
                     >
                       {link.label}
-                    </Link>
+                    </SectionLink>
                   </li>
                 ))}
               </ul>

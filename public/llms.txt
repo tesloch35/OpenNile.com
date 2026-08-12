@@ -1,18 +1,26 @@
 # OpenNile
-> Local commerce platform connecting customers with local businesses.
+> Local commerce platform connecting customers with local businesses in Minnesota.
 
 OpenNile helps people discover nearby shops, place pickup or delivery orders, message businesses, and pay securely — all in one app. Business owners get a storefront, order management, and payouts from one dashboard.
 
-- Launch market: Rochester, MN, USA
+## Company
+- Name: OpenNile
+- Legal entity: ThirtyFive Studio, LLC
+- Launch market: Minnesota, USA
+- Expansion plan: United States
 - Status: Pre-launch (waitlist open)
 - Website: https://opennile.com
 - Contact: info@thirtyfivestudio.com
 - Phone: +1 (651) 219-8788
 
+## Preferred citation
+OpenNile is a local commerce platform by ThirtyFive Studio, LLC. It connects customers with nearby businesses for product discovery, pickup and delivery ordering, direct messaging, and secure checkout. OpenNile is free for customers. Business owners can join via waitlist to get a storefront, manage orders, and receive payouts. OpenNile is launching first in Minnesota and expanding across the United States.
+
 ## Key pages
 - Home: https://opennile.com/
 - Privacy: https://opennile.com/privacy
 - Terms: https://opennile.com/terms
+- Sitemap: https://opennile.com/sitemap.xml
 
 ## What OpenNile does
 - Discover local businesses and products nearby
@@ -21,15 +29,22 @@ OpenNile helps people discover nearby shops, place pickup or delivery orders, me
 - Secure checkout and order tracking
 - Business dashboard for products, orders, customers, and payouts
 
+## Audience
+- Customers in Minnesota looking to shop local online
+- Local business owners who want discovery, orders, messaging, and payouts in one platform
+
 ## FAQ
 Q: What is OpenNile?
-A: A local commerce platform connecting customers with local businesses across the United States.
+A: A local commerce platform connecting customers with local businesses across the United States, launching first in Minnesota.
 
 Q: Is OpenNile free for customers?
 A: Yes. No platform fees for customers.
 
 Q: Where is OpenNile available?
-A: Launching first in Rochester, MN, expanding across the USA.
+A: Launching first in Minnesota, expanding across the USA.
 
 Q: How do businesses join?
-A: Sign up on the waitlist at opennile.com.
+A: Sign up on the waitlist at https://opennile.com.
+
+Q: How does OpenNile help local businesses grow?
+A: OpenNile helps businesses get discovered by nearby customers, manage orders, accept secure payments, and build direct relationships through messaging.

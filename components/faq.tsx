@@ -7,7 +7,7 @@ import { faqs, type FaqItem } from "@/lib/faq-data"
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-[120px] px-6 bg-white border-t border-border">
+    <section id="faq" className="scroll-mt-[80px] py-[120px] px-6 bg-white border-t border-border">
       <div className="max-w-[760px] mx-auto">
         <Reveal className="text-center mb-14">
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-sienna mb-5 justify-center">

@@ -1,12 +1,12 @@
 import Image from "next/image"
-import Link from "next/link"
+import { SectionLink } from "@/components/section-link"
 import { WaitlistForm } from "@/components/waitlist-form"
 import { BRAND } from "@/lib/constants"
 import { images } from "@/lib/images"
 
 export function Hero() {
   return (
-    <section id="home" className="flex flex-col items-center justify-center text-center px-6 pt-[100px] pb-12 md:pb-20 md:min-h-screen relative overflow-x-hidden bg-white">
+    <section id="home" className="scroll-mt-[80px] flex flex-col items-center justify-center text-center px-6 pt-[100px] pb-12 md:pb-20 md:min-h-screen relative overflow-x-hidden bg-white">
       <div className="absolute w-[600px] h-[600px] rounded-full bg-[radial-gradient(ellipse,rgba(26,92,42,0.08)_0%,transparent_70%)] -top-[100px] -right-[100px] pointer-events-none" />
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[radial-gradient(ellipse,rgba(74,158,99,0.12)_0%,transparent_70%)] -bottom-20 -left-20 pointer-events-none" />
 
@@ -46,12 +46,12 @@ export function Hero() {
       <div className="animate-fade-up-delay-3 w-full max-w-[620px]">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <WaitlistForm source="hero" className="w-full sm:w-auto sm:min-w-[220px]" />
-          <Link
+          <SectionLink
             href="#features"
             className="inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[180px] font-sans text-sm font-semibold text-bark border border-border-strong bg-white/70 hover:bg-white px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             Explore Features
-          </Link>
+          </SectionLink>
         </div>
         <p className="text-xs text-text3 mt-3">
           Be among the first to experience OpenNile.

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Instrument_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { BRAND } from '@/lib/constants'
 import './globals.css'
 
 const fraunces = Fraunces({ 
@@ -19,33 +20,37 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'OpenNile — Shop Local Businesses in One Place | Local Commerce Platform',
-  description: 'Discover local businesses across the USA, browse products, place orders for pickup or delivery, and checkout securely. Support your community with OpenNile.',
-  keywords: ['local commerce', 'shop local', 'local business marketplace', 'support local businesses', 'local shopping app', 'community commerce', 'small business platform'],
-  authors: [{ name: 'OpenNile' }],
-  creator: 'OpenNile',
-  publisher: 'OpenNile',
-  metadataBase: new URL('https://opennile.com'),
+  title: BRAND.seoTitle,
+  description: BRAND.seoDescription,
+  keywords: [...BRAND.seoKeywords],
+  authors: [{ name: BRAND.name, url: BRAND.url }],
+  creator: BRAND.legalName,
+  publisher: BRAND.legalName,
+  metadataBase: new URL(BRAND.url),
+  alternates: {
+    canonical: BRAND.url,
+  },
+  category: 'Local Commerce',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://opennile.com',
-    siteName: 'OpenNile',
-    title: 'OpenNile — Shop Local Businesses in One Place',
-    description: 'Discover local businesses across the USA, browse products, place orders for pickup or delivery, and checkout securely. Support your community with OpenNile.',
+    url: BRAND.url,
+    siteName: BRAND.name,
+    title: BRAND.seoTitle,
+    description: BRAND.seoDescription,
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'OpenNile — Shop Local Businesses in One Place',
+        alt: `${BRAND.name} — Shop Local Businesses in Minnesota`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OpenNile — Shop Local Businesses in One Place',
-    description: 'Discover local businesses across the USA, browse products, place orders for pickup or delivery, and checkout securely.',
+    title: BRAND.seoTitle,
+    description: BRAND.seoDescription,
     images: ['/twitter-image'],
   },
   robots: {
@@ -68,6 +73,9 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
     shortcut: '/favicon-32.png',
   },
+  other: {
+    'ai-description': BRAND.aiCitation,
+  },
 }
 
 export const viewport: Viewport = {
@@ -81,6 +89,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-background">
+      <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM context file" />
+      </head>
       <body className={`${fraunces.variable} ${instrumentSans.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

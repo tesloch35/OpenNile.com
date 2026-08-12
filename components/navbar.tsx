@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { SectionLink } from "@/components/section-link"
 import { WaitlistForm } from "@/components/waitlist-form"
 import { useActiveSection } from "@/hooks/use-active-section"
 import { cn } from "@/lib/utils"
@@ -22,14 +22,14 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-white/92 backdrop-blur-[18px] border-b border-border">
       <div className="h-full max-w-[1120px] mx-auto px-6 md:px-8 flex items-center justify-between">
-        <Link href="#home" className="font-serif text-[22px] font-bold text-bark tracking-[-0.02em]">
+        <SectionLink href="#home" className="font-serif text-[22px] font-bold text-bark tracking-[-0.02em]">
           OpenNile
-        </Link>
+        </SectionLink>
 
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link
+              <SectionLink
                 href={link.href}
                 className={cn(
                   "relative text-sm font-medium transition-colors tracking-[0.01em] pb-1",
@@ -45,7 +45,7 @@ export function Navbar() {
                     activeId === link.id ? "bg-sienna opacity-100" : "opacity-0"
                   )}
                 />
-              </Link>
+              </SectionLink>
             </li>
           ))}
         </ul>
@@ -74,9 +74,9 @@ export function Navbar() {
                 className="animate-menu-in"
                 style={{ animationDelay: `${0.05 + index * 0.04}s` }}
               >
-                <Link
+                <SectionLink
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onNavigate={() => setMobileOpen(false)}
                   className={cn(
                     "block py-3 text-sm font-medium transition-colors border-b border-border last:border-0",
                     activeId === link.id
@@ -85,7 +85,7 @@ export function Navbar() {
                   )}
                 >
                   {link.label}
-                </Link>
+                </SectionLink>
               </li>
             ))}
             <li className="pt-4">
