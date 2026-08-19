@@ -1,3 +1,9 @@
+export function lockPageScroll() {
+  if (typeof document === "undefined") return
+
+  document.body.style.overflow = "hidden"
+}
+
 export function unlockPageScroll() {
   if (typeof document === "undefined") return
 

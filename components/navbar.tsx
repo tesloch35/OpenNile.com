@@ -1,11 +1,12 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { SectionLink } from "@/components/section-link"
 import { Logo } from "@/components/logo"
 import { WaitlistForm } from "@/components/waitlist-form"
 import { useActiveSection } from "@/hooks/use-active-section"
+import { lockPageScroll, unlockPageScroll } from "@/lib/page-scroll"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -19,6 +20,17 @@ const navLinks = [
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const activeId = useActiveSection(navLinks.map((link) => link.id))
+
+  useEffect(() => {
+    if (!mobileOpen) return
+
+    lockPageScroll()
+    return () => {
+      if (!document.querySelector('[role="dialog"][data-state="open"]')) {
+        unlockPageScroll()
+      }
+    }
+  }, [mobileOpen])
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-white/92 backdrop-blur-[18px] border-b border-border">

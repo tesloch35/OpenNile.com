@@ -46,6 +46,11 @@ export function ContactForm() {
       return
     }
 
+    if (description.trim().length < 10) {
+      setError("Please add a few more details")
+      return
+    }
+
     setLoading(true)
 
     const result = await submitContact({

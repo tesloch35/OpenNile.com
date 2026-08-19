@@ -19,11 +19,12 @@ type ShareMetadataOptions = {
 
 export function createShareMetadata({
   title = BRAND.seoTitle,
-  shareTitle = BRAND.tagline,
+  shareTitle,
   description = BRAND.shareDescription,
   path = "",
 }: ShareMetadataOptions = {}): Metadata {
   const url = `${BRAND.url}${path}`
+  const resolvedShareTitle = shareTitle ?? (path ? title : BRAND.tagline)
 
   return {
     title,
@@ -36,7 +37,7 @@ export function createShareMetadata({
       locale: "en_US",
       url,
       siteName: "opennile.com",
-      title: shareTitle,
+      title: resolvedShareTitle,
       description,
       images: [
         {
@@ -51,7 +52,7 @@ export function createShareMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: shareTitle,
+      title: resolvedShareTitle,
       description,
       images: [SHARE_IMAGE.secureUrl],
     },

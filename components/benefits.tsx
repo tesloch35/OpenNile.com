@@ -27,8 +27,8 @@ const customerFeatures = [
   },
   {
     icon: ShoppingBag,
-    title: "Discover Local Businesses Near You",
-    description: "Find trusted local businesses and explore products in your area — all in one place with OpenNile.",
+    title: "Order Pickup or Delivery",
+    description: "Browse products from trusted local shops and choose pickup or delivery that fits your schedule.",
     image: images.benefits.order,
   },
   {
@@ -216,7 +216,7 @@ function FeatureCard({
 
 function TaglineBanner() {
   return (
-    <Reveal className="mt-14 bg-sienna rounded-[20px] p-10 md:p-13 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
+    <Reveal className="mt-14 bg-sienna rounded-[20px] p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
       <div className="absolute -top-[100px] -right-20 w-[360px] h-[360px] bg-[radial-gradient(ellipse,rgba(30,215,96,0.25)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10">
