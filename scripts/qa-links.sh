@@ -10,6 +10,8 @@ routes=(
   "/sitemap.xml"
   "/robots.txt"
   "/opengraph-image"
+  "/favicon.ico"
+  "/apple-touch-icon.png"
 )
 
 echo "QA link check against $BASE_URL"
