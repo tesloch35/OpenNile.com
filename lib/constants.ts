@@ -8,6 +8,7 @@ export const BRAND = {
   locationFull: "Minnesota",
   url: "https://opennile.com",
   logo: "/logo.png",
+  logoTransparent: "/logo-transparent.png",
   logoWhite: "/logo-white.png",
   tagline: "Shop Everything Local, All in One Place.",
   shareDescription:

@@ -33,8 +33,8 @@ export function Hero() {
       </p>
 
       <h1 className="animate-fade-up-delay-1 font-serif text-[clamp(44px,6.5vw,86px)] font-medium leading-[1.06] tracking-[-0.03em] max-w-[860px] mb-7 text-foreground text-balance">
-        Shop Local Businesses{" "}
-        <em className="italic font-light text-sienna">in One Place</em>
+        Shop Everything Local,{" "}
+        <em className="italic font-light text-sienna">All in One Place.</em>
       </h1>
 
       <p className="animate-fade-up-delay-2 text-lg text-text2 max-w-[640px] leading-relaxed mb-12 text-balance">

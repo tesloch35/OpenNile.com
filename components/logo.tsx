@@ -16,7 +16,7 @@ export function Logo({
   return (
     <span className={cn("inline-flex items-center", className)}>
       <Image
-        src={variant === "light" ? BRAND.logoWhite : BRAND.logo}
+        src={variant === "light" ? BRAND.logoWhite : BRAND.logoTransparent}
         alt={`${BRAND.name} logo`}
         width={56}
         height={56}
