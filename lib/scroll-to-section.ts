@@ -4,18 +4,22 @@ function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches
 }
 
-export function scrollToSection(sectionId: string) {
+function cancelSmoothScroll() {
+  window.scrollTo({ top: window.scrollY, behavior: "auto" })
+}
+
+export function scrollToSection(
+  sectionId: string,
+  behavior: ScrollBehavior = prefersReducedMotion() ? "auto" : "smooth"
+) {
   const element = document.getElementById(sectionId)
   if (!element) return false
 
-  const top =
-    element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT - 12
+  if (behavior === "smooth") {
+    cancelSmoothScroll()
+  }
 
-  window.scrollTo({
-    top: Math.max(0, top),
-    behavior: prefersReducedMotion() ? "auto" : "smooth",
-  })
-
+  element.scrollIntoView({ behavior, block: "start" })
   return true
 }
 

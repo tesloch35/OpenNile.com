@@ -22,7 +22,7 @@ export function SectionLink({
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault()
 
-    if (scrollToSection(sectionId)) {
+    if (scrollToSection(sectionId, "smooth")) {
       window.history.pushState(null, "", href)
       onNavigate?.()
     }

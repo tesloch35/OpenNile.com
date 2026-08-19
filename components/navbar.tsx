@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { SectionLink } from "@/components/section-link"
+import { Logo } from "@/components/logo"
 import { WaitlistForm } from "@/components/waitlist-form"
 import { useActiveSection } from "@/hooks/use-active-section"
 import { cn } from "@/lib/utils"
@@ -22,8 +23,8 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[68px] bg-white/92 backdrop-blur-[18px] border-b border-border">
       <div className="h-full max-w-[1120px] mx-auto px-6 md:px-8 flex items-center justify-between">
-        <SectionLink href="#home" className="font-serif text-[22px] font-bold text-bark tracking-[-0.02em]">
-          OpenNile
+        <SectionLink href="#home">
+          <Logo />
         </SectionLink>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -34,7 +35,7 @@ export function Navbar() {
                 className={cn(
                   "relative text-sm font-medium transition-colors tracking-[0.01em] pb-1",
                   activeId === link.id
-                    ? "text-bark"
+                    ? "text-foreground"
                     : "text-text2 hover:text-text"
                 )}
               >
@@ -56,7 +57,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-border-strong text-bark hover:bg-sand transition-colors"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-border-strong text-foreground hover:bg-sand transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -80,7 +81,7 @@ export function Navbar() {
                   className={cn(
                     "block py-3 text-sm font-medium transition-colors border-b border-border last:border-0",
                     activeId === link.id
-                      ? "text-bark"
+                      ? "text-foreground"
                       : "text-text2 hover:text-text"
                   )}
                 >

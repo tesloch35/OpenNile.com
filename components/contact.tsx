@@ -35,7 +35,7 @@ export function Contact() {
           <ContactInfo />
 
           <Reveal delay={0.1} className="bg-sand border border-border rounded-3xl p-8 md:p-10">
-            <h3 className="font-serif text-[clamp(24px,3vw,32px)] font-medium tracking-[-0.03em] text-bark mb-2">
+            <h3 className="font-serif text-[clamp(24px,3vw,32px)] font-medium tracking-[-0.03em] text-foreground mb-2">
               Send us a message
             </h3>
             <p className="text-[15px] text-text2 leading-relaxed mb-8">
@@ -57,7 +57,7 @@ function ContactInfo() {
           <span className="w-[18px] h-[1.5px] bg-sienna flex-shrink-0" />
           Contact
         </div>
-        <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-bark">
+        <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground">
           Get in Touch
         </h2>
         <p className="text-[17px] text-text2 leading-relaxed max-w-[440px] mt-4">
@@ -87,7 +87,7 @@ function ContactItem({ item, delay }: { item: typeof contactItems[0]; delay: num
         <span className="text-[11px] font-semibold tracking-[0.1em] uppercase text-text3 mb-1 block">
           {item.label}
         </span>
-        <div className="text-[15px] font-medium text-bark">
+        <div className="text-[15px] font-medium text-foreground">
           {item.href ? (
             <Link href={item.href} className="hover:text-sienna transition-colors">
               {item.value}

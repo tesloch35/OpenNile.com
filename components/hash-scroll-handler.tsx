@@ -10,7 +10,7 @@ export function HashScrollHandler() {
       if (!sectionId) return
 
       requestAnimationFrame(() => {
-        scrollToSection(sectionId)
+        scrollToSection(sectionId, "auto")
       })
     }
 

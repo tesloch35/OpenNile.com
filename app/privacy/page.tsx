@@ -1,11 +1,13 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { BRAND } from "@/lib/constants"
+import { createShareMetadata } from "@/lib/share-metadata"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createShareMetadata({
   title: "Privacy Policy — OpenNile",
   description: "How OpenNile collects, uses, and protects your information.",
-}
+  path: "/privacy",
+})
 
 export default function PrivacyPage() {
   return (
@@ -18,21 +20,25 @@ export default function PrivacyPage() {
           ← Back to OpenNile
         </Link>
 
-        <h1 className="font-serif text-[clamp(32px,4vw,48px)] font-medium text-bark tracking-[-0.03em] mt-8 mb-4">
+        <h1 className="font-serif text-[clamp(32px,4vw,48px)] font-medium text-foreground tracking-[-0.03em] mt-8 mb-4">
           Privacy Policy
         </h1>
-        <p className="text-sm text-text3 mb-10">Last updated: June 19, 2026</p>
+
+        <div className="text-sm text-text3 flex flex-col gap-1 mb-10">
+          <p>Effective Date: Aug 19, 2026</p>
+          <p>Last updated: Aug 19, 2026</p>
+        </div>
 
         <div className="prose-section flex flex-col gap-8 text-[15px] text-text2 leading-relaxed">
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">Overview</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">Overview</h2>
             <p>
               {BRAND.name} (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy. This policy explains what information we collect when you visit our website or join our waitlist, and how we use it.
             </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">Information We Collect</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">Information We Collect</h2>
             <p>When you join our waitlist or contact us, we may collect:</p>
             <ul className="list-disc pl-5 mt-2 flex flex-col gap-1">
               <li>Email address</li>
@@ -45,7 +51,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">How We Use Your Information</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">How We Use Your Information</h2>
             <p>We use the information you provide to:</p>
             <ul className="list-disc pl-5 mt-2 flex flex-col gap-1">
               <li>Manage our waitlist and notify you about launch updates</li>
@@ -55,7 +61,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">Analytics</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">Analytics</h2>
             <p>
               We use Vercel Analytics to collect anonymous usage data (such as page views) to understand how visitors use our website. This service does not use cookies for tracking and does not collect personally identifiable information. Learn more in{" "}
               <a
@@ -71,14 +77,14 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">Data Sharing</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">Data Sharing</h2>
             <p>
               We do not sell your personal information. We may share data with trusted service providers who help us operate our website, subject to confidentiality obligations.
             </p>
           </section>
 
           <section>
-            <h2 className="font-serif text-xl font-medium text-bark mb-3">Contact Us</h2>
+            <h2 className="font-serif text-xl font-medium text-foreground mb-3">Contact Us</h2>
             <p>
               Questions about this policy? Email us at{" "}
               <a href={`mailto:${BRAND.email}`} className="text-sienna hover:underline">

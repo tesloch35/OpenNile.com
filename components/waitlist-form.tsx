@@ -21,6 +21,7 @@ import type { WaitlistPayload } from "@/lib/waitlist-schema"
 import type { WaitlistRole } from "@/lib/waitlist-schema"
 import { FormConsent } from "@/components/form-consent"
 import { cn } from "@/lib/utils"
+import { useScrollLockCleanup } from "@/hooks/use-scroll-lock-cleanup"
 
 type Source = NonNullable<WaitlistPayload["source"]>
 type Variant = "hero" | "dark" | "light" | "nav" | "contact" | "outline-light"
@@ -72,6 +73,8 @@ export function WaitlistProvider({ children }: { children: ReactNode }) {
   const [successMessage, setSuccessMessage] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+
+  useScrollLockCleanup(open)
 
   const resetForm = () => {
     setRole("customer")
@@ -144,7 +147,7 @@ export function WaitlistProvider({ children }: { children: ReactNode }) {
       <Dialog open={open} onOpenChange={handleOpenChange}>
         <DialogContent className="sm:max-w-md rounded-2xl border-border p-6 md:p-8">
           <DialogHeader className="text-left gap-1.5">
-            <DialogTitle className="font-serif text-[26px] font-medium tracking-[-0.03em] text-bark">
+            <DialogTitle className="font-serif text-[26px] font-medium tracking-[-0.03em] text-foreground">
               Join the Waitlist
             </DialogTitle>
             <DialogDescription className="text-[15px] text-text2 leading-relaxed">
@@ -316,10 +319,10 @@ const triggerVariants: Record<Variant, string> = {
   hero: "group inline-flex items-center justify-center gap-1.5 font-sans text-sm font-semibold text-white bg-sienna hover:bg-sienna-dark px-8 py-3.5 rounded-full w-full transition-all hover:-translate-y-0.5 hover:shadow-xl hover:scale-[1.02]",
   dark: "group inline-flex items-center justify-center gap-1.5 font-sans text-sm font-semibold text-white bg-sienna hover:bg-sienna-dark px-8 py-3.5 rounded-full w-full transition-all hover:-translate-y-0.5 hover:shadow-xl hover:scale-[1.02]",
   light:
-    "inline-block font-sans text-[15px] font-semibold text-bark bg-white px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-xl",
+    "inline-block font-sans text-[15px] font-semibold text-sienna bg-white px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-xl",
   nav: "group hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-white bg-sienna hover:bg-sienna-dark px-5 py-2.5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-lg",
   contact:
-    "font-sans text-[15px] font-semibold text-bark bg-white px-8 py-3.5 rounded-full w-full transition-all hover:-translate-y-0.5 hover:shadow-xl",
+    "font-sans text-[15px] font-semibold text-sienna bg-white px-8 py-3.5 rounded-full w-full transition-all hover:-translate-y-0.5 hover:shadow-xl",
   "outline-light":
     "inline-flex items-center justify-center font-sans text-[15px] font-semibold text-white bg-transparent border border-white/30 px-8 py-3.5 rounded-full transition-all hover:bg-white/10 hover:-translate-y-0.5",
 }

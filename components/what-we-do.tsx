@@ -33,7 +33,7 @@ export function WhatWeDo() {
               <span className="w-[18px] h-[1.5px] bg-sienna flex-shrink-0" />
               About Us
             </div>
-            <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-bark">
+            <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground">
               One Platform for Local Commerce
             </h2>
             <p className="text-[17px] text-text2 leading-relaxed max-w-[640px] mt-4 mx-auto md:mx-0">

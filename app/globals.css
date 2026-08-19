@@ -5,42 +5,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a2e14;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --card-foreground: #0a2e14;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #0a2e14;
-  --primary: #1A5C2A;
+  --popover-foreground: #0f172a;
+  --primary: #1DB954;
   --primary-foreground: #ffffff;
-  --secondary: #f0f7f2;
-  --secondary-foreground: #1A5C2A;
-  --muted: #f0f7f2;
-  --muted-foreground: #5a8a6a;
-  --accent: #e0ede5;
-  --accent-foreground: #1A5C2A;
+  --secondary: #eefbf3;
+  --secondary-foreground: #1DB954;
+  --muted: #eefbf3;
+  --muted-foreground: #5a9e72;
+  --accent: #dcfce7;
+  --accent-foreground: #1DB954;
   --destructive: #e53935;
   --destructive-foreground: #ffffff;
-  --border: rgba(26,92,42,0.1);
-  --border-strong: rgba(26,92,42,0.2);
-  --input: rgba(26,92,42,0.1);
-  --ring: #4a9e63;
+  --border: rgba(29, 185, 84, 0.12);
+  --border-strong: rgba(29, 185, 84, 0.22);
+  --input: rgba(29, 185, 84, 0.12);
+  --ring: #1ed760;
   --radius: 0.625rem;
   
   /* OpenNile specific colors */
   --cream: #ffffff;
   --warm-white: #ffffff;
-  --sand: #f0f7f2;
-  --sand2: #e0ede5;
-  --clay: #4a9e63;
-  --sienna: #1A5C2A;
-  --sienna-dark: #0f3d1c;
-  --sienna-light: #2E8B45;
-  --stone: #3d7a50;
-  --bark: #1A5C2A;
-  --bark2: #0f3d1c;
-  --text: #0a2e14;
-  --text2: #2d5c3a;
-  --text3: #5a8a6a;
+  --sand: #eefbf3;
+  --sand2: #dcfce7;
+  --clay: #1ed760;
+  --sienna: #1DB954;
+  --sienna-dark: #1aa34a;
+  --sienna-light: #1ed760;
+  --stone: #18b351;
+  --bark: #111827;
+  --bark2: #0f172a;
+  --text: #0f172a;
+  --text2: #334155;
+  --text3: #64748b;
 }
 
 @theme inline {
@@ -94,9 +94,13 @@
   }
   html {
     scroll-padding-top: 80px;
+    overflow-x: clip;
+    overflow-y: scroll;
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    min-height: 100%;
   }
   
   /* Custom scrollbar */

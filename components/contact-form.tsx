@@ -78,7 +78,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="rounded-2xl border border-border bg-sand/50 p-8 text-center">
-        <p className="font-serif text-[22px] font-medium text-bark mb-2">Thank you!</p>
+        <p className="font-serif text-[22px] font-medium text-foreground mb-2">Thank you!</p>
         <p className="text-[15px] text-text2">{successMessage}</p>
       </div>
     )

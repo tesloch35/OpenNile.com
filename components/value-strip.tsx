@@ -1,12 +1,13 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { BRAND } from "@/lib/constants"
 
 export function ValueStrip() {
   const values = ["Discover", "Order", "Connect", "Pay"]
 
   return (
-    <div className="bg-bark py-[22px] px-10 text-center relative overflow-hidden">
+    <div className="bg-sienna py-[22px] px-10 text-center relative overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
@@ -17,7 +18,7 @@ export function ValueStrip() {
       <div className="relative z-10">
         <Reveal>
           <p className="font-serif text-[13px] font-medium italic text-white tracking-[0.04em] mb-3">
-            Everything Local, All in One Place
+            {BRAND.tagline}
           </p>
         </Reveal>
         <Reveal delay={0.08}>

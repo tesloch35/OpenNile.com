@@ -4,6 +4,7 @@ export const images = {
     market: "/images/hero-online-order.png",
     shop: "/images/hero-pickup.png",
     appMockup: "/images/app-mockup.png",
+    sharePreview: "/images/app-mockup.png",
   },
   whatWeDo: {
     customer: "/images/hero-online-order.png",

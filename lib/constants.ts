@@ -7,7 +7,16 @@ export const BRAND = {
   location: "Minnesota",
   locationFull: "Minnesota",
   url: "https://opennile.com",
-  tagline: "Everything Local, All in One Place.",
+  logo: "/logo.png",
+  logoWhite: "/logo-white.png",
+  tagline: "Shop Everything Local, All in One Place.",
+  shareDescription:
+    "Discover local businesses, browse products, and order pickup or delivery with OpenNile.",
+  color: {
+    primary: "#1DB954",
+    primaryDark: "#1aa34a",
+    primaryLight: "#1ed760",
+  },
   seoTitle: "OpenNile — Shop Local Businesses in Minnesota | Local Commerce Platform",
   seoDescription:
     "Discover and shop local businesses across Minnesota. Browse products, order pickup or delivery, message shops, and checkout securely with OpenNile — launching statewide, expanding across the USA.",

@@ -81,7 +81,7 @@ export function Benefits() {
             <span className="w-[18px] h-[1.5px] bg-sienna flex-shrink-0" />
             Features
           </div>
-          <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-bark">
+          <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground">
             Join OpenNile!
           </h2>
           <p className="text-[17px] text-text2 leading-relaxed max-w-[640px] mx-auto mt-4">
@@ -147,15 +147,15 @@ function FeaturesSection({
       <Reveal className="text-center mb-10 max-w-[640px] mx-auto">
         <div className="flex items-center justify-center gap-3 mb-4">
           <div
-            className={`w-11 h-11 rounded-xl flex items-center justify-center ${variant === "sienna" ? "bg-sienna/10 border border-sienna/15" : "bg-bark/10 border border-bark/12"}`}
+            className={`w-11 h-11 rounded-xl flex items-center justify-center ${variant === "sienna" ? "bg-sienna/10 border border-sienna/15" : "bg-sienna/10 border border-sienna/15"}`}
           >
             <SectionIcon className="w-5 h-5 text-sienna" strokeWidth={1.5} />
           </div>
-          <h3 className="font-serif text-[clamp(24px,3vw,32px)] font-medium tracking-[-0.03em] text-bark">
+          <h3 className="font-serif text-[clamp(24px,3vw,32px)] font-medium tracking-[-0.03em] text-foreground">
             {title}
           </h3>
         </div>
-        <h4 className="font-serif text-[20px] font-medium tracking-[-0.02em] text-bark mb-3">
+        <h4 className="font-serif text-[20px] font-medium tracking-[-0.02em] text-foreground mb-3">
           {subtitle}
         </h4>
         <p className="text-[15px] text-text2 leading-relaxed">{description}</p>
@@ -197,14 +197,14 @@ function FeatureCard({
             className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
           />
           <div
-            className={`absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center shadow-md backdrop-blur-sm ${variant === "sienna" ? "bg-white/95 border border-sienna/15" : "bg-white/95 border border-bark/12"}`}
+            className={`absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center shadow-md backdrop-blur-sm ${variant === "sienna" ? "bg-white/95 border border-sienna/15" : "bg-white/95 border border-sienna/15"}`}
           >
             <Icon className="w-5 h-5 text-sienna" strokeWidth={1.5} />
           </div>
         </div>
 
         <div className="p-5 pb-6 flex-1">
-          <h4 className="font-serif text-[18px] font-medium tracking-[-0.02em] text-bark mb-1">
+          <h4 className="font-serif text-[18px] font-medium tracking-[-0.02em] text-foreground mb-1">
             {feature.title}
           </h4>
           <p className="text-sm text-text2 leading-relaxed">{feature.description}</p>
@@ -216,8 +216,8 @@ function FeatureCard({
 
 function TaglineBanner() {
   return (
-    <Reveal className="mt-14 bg-bark rounded-[20px] p-10 md:p-13 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
-      <div className="absolute -top-[100px] -right-20 w-[360px] h-[360px] bg-[radial-gradient(ellipse,rgba(74,158,99,0.25)_0%,transparent_70%)] pointer-events-none" />
+    <Reveal className="mt-14 bg-sienna rounded-[20px] p-10 md:p-13 flex flex-col md:flex-row items-center justify-between gap-10 relative overflow-hidden">
+      <div className="absolute -top-[100px] -right-20 w-[360px] h-[360px] bg-[radial-gradient(ellipse,rgba(30,215,96,0.25)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10">
         <h3 className="font-serif text-[clamp(24px,3vw,36px)] font-medium tracking-[-0.03em] text-white leading-[1.15] mb-2.5">

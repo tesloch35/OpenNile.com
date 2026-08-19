@@ -30,7 +30,7 @@ export function HowItWorks() {
             <span className="w-[18px] h-[1.5px] bg-sienna flex-shrink-0" />
             How It Works
           </div>
-          <h2 className="font-serif text-[clamp(28px,3.5vw,40px)] font-medium leading-[1.1] tracking-[-0.03em] text-bark">
+          <h2 className="font-serif text-[clamp(28px,3.5vw,40px)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground">
             Local shopping, simplified
           </h2>
         </Reveal>
@@ -47,7 +47,7 @@ export function HowItWorks() {
                   <div className="w-11 h-11 rounded-xl bg-sienna/10 border border-sienna/15 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-5 h-5 text-sienna" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-[20px] font-medium tracking-[-0.02em] text-bark mb-2">
+                  <h3 className="font-serif text-[20px] font-medium tracking-[-0.02em] text-foreground mb-2">
                     {step.title}
                   </h3>
                   <p className="text-sm text-text2 leading-relaxed">{step.description}</p>

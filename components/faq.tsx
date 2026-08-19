@@ -14,7 +14,7 @@ export function FAQ() {
             <span className="w-[18px] h-[1.5px] bg-sienna flex-shrink-0" />
             FAQ
           </div>
-          <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-bark">
+          <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-medium leading-[1.1] tracking-[-0.03em] text-foreground">
             Common Questions
           </h2>
         </Reveal>
@@ -47,7 +47,7 @@ function FAQItem({
           aria-expanded={open}
           className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left bg-white hover:bg-sand/50 transition-colors duration-300"
         >
-          <span className="font-serif text-[17px] font-medium text-bark tracking-[-0.01em]">
+          <span className="font-serif text-[17px] font-medium text-foreground tracking-[-0.01em]">
             {faq.question}
           </span>
           <ChevronDown
